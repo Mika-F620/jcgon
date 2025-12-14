@@ -28,6 +28,12 @@ body {
   gap: 32px;
 }
 
+.main__details {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
 /** @format */
 /*! destyle.css v3.0.2 | MIT License | https://github.com/nicolas-cusan/destyle.css */
 /* Reset box-model and set borders */
@@ -423,5 +429,59 @@ th {
 
 .topLink__link {
   font-size: 1.6rem;
+  color: #333;
+}
+
+/** @format */
+.topNews {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.topNews__line {
+  padding: 16px 0;
+  border-bottom: 1px solid #ddd;
+  transition: all 0.2s;
+}
+.topNews__line:last-child {
+  border-bottom: none;
+}
+.topNews__line:hover {
+  opacity: 0.7;
+}
+
+.topNews__title {
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: bold;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+.topNews__title::after {
+  content: "";
+  background-image: url("../img/pages/front-page/news-icon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 32px;
+  height: 32px;
+}
+
+.topNews__line {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.topNews__detailsTitle {
+  font-size: 1.8rem;
+  color: #0a6b00;
+  width: 100px;
+}
+
+.topNews__detailsContent {
+  font-size: 1.8rem;
   color: #333;
 }/*# sourceMappingURL=front-page.css.map */

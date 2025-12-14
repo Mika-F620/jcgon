@@ -6,6 +6,12 @@
 
   <?php get_template_part('component/front-page/link'); ?>
 
+  <div class="main__details">
+
+    <?php get_template_part('component/front-page/news'); ?>
+
+  </div>
+
 </div>
 
 </main>
