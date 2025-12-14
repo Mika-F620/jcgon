@@ -1,0 +1,22 @@
+/** @format */
+
+@use "../../global/" as g;
+@use "sass:math";
+
+.topLink {
+  background-color: g.$white-color;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 0 8px rgba(51, 51, 51, 0.25);
+  padding: 32px 32px 32px 24px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  align-items: flex-end;
+}
+
+.topLink__link {
+  font-size: 1.6rem;
+  color: g.$text-color;
+}

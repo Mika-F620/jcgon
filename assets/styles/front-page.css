@@ -15,6 +15,17 @@ body {
   width: 100%;
   max-width: 1160px;
   margin: 0 auto;
+  padding: 80px 40px;
+}
+@media screen and (max-width: 480px) {
+  .wrapper {
+    padding: 40px 16px;
+  }
+}
+
+.main__contents {
+  display: flex;
+  gap: 32px;
 }
 
 /** @format */
@@ -395,4 +406,22 @@ th {
 th {
   text-align: left;
   font-weight: bold;
+}
+
+.topLink {
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 0 8px rgba(51, 51, 51, 0.25);
+  padding: 32px 32px 32px 24px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  align-items: flex-end;
+}
+
+.topLink__link {
+  font-size: 1.6rem;
+  color: #333;
 }/*# sourceMappingURL=front-page.css.map */

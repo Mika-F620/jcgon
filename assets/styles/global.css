@@ -18,6 +18,17 @@ body {
   width: 100%;
   max-width: 1160px;
   margin: 0 auto;
+  padding: 80px 40px;
+}
+@media screen and (max-width: 480px) {
+  .wrapper {
+    padding: 40px 16px;
+  }
+}
+
+.main__contents {
+  display: flex;
+  gap: 32px;
 }
 
 /** @format */
