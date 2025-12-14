@@ -553,6 +553,72 @@ th {
 
 /** @format */
 /** @format */
+.footer {
+  background-color: #0a6b00;
+  padding: 48px 83px;
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 24px;
+  }
+}
+
+.footer__contents {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.footer__text {
+  font-size: 2.4rem;
+  color: #fff;
+}
+.footer__text br {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .footer__text br {
+    display: block;
+  }
+}
+
+.footer__logo {
+  display: flex;
+  gap: 24px;
+}
+@media screen and (max-width: 768px) {
+  .footer__logo {
+    gap: 3.125vw;
+  }
+}
+
+.footer__logoImg {
+  width: 100%;
+}
+.footer__logoImg:first-child {
+  max-width: 145px;
+}
+@media screen and (max-width: 768px) {
+  .footer__logoImg:first-child {
+    max-width: 18.8802083333vw;
+  }
+}
+.footer__logoImg:last-child {
+  max-width: 235px;
+}
+@media screen and (max-width: 768px) {
+  .footer__logoImg:last-child {
+    max-width: 30.5989583333vw;
+  }
+}
+
+.footer__link {
+  font-size: 2.4rem;
+  color: #fff;
+  text-decoration: underline;
+  width: fit-content;
+}
+
 /** @format */
 /* Slider */
 .slick-loading .slick-list {

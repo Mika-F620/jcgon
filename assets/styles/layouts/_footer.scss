@@ -1,3 +1,67 @@
 /** @format */
 
 @use "../global/" as g;
+
+.footer {
+  background-color: g.$main-color;
+  padding: 48px 83px;
+
+  @include g.mq("tab") {
+    padding: 24px;
+  }
+}
+
+.footer__contents {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.footer__text {
+  font-size: 2.4rem;
+  color: g.$white-color;
+
+  br {
+    display: none;
+
+    @include g.mq("tab") {
+      display: block;
+    }
+  }
+}
+
+.footer__logo {
+  display: flex;
+  gap: 24px;
+
+  @include g.mq("tab") {
+    gap: 3.125vw;
+  }
+}
+
+.footer__logoImg {
+  width: 100%;
+
+  &:first-child {
+    max-width: 145px;
+
+    @include g.mq("tab") {
+      max-width: 18.880208333333336vw;
+    }
+  }
+
+  &:last-child {
+    max-width: 235px;
+
+    @include g.mq("tab") {
+      max-width: 30.598958333333332vw;
+    }
+  }
+}
+
+.footer__link {
+  font-size: 2.4rem;
+  color: g.$white-color;
+  text-decoration: underline;
+  width: fit-content;
+}

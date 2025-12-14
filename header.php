@@ -15,13 +15,13 @@
       <div class="header__logo">
         <img
           class="header__logoImg"
-          src="<?php echo get_template_directory_uri(); ?>/assets/img/common/jcgon-logo.png"
-          alt="JCGON"
+          src="<?php echo get_template_directory_uri(); ?>/assets/img/common/jccgon_logo.png"
+          alt="JCCGON"
         >
         <img
           class="header__logoImg"
-          src="<?php echo get_template_directory_uri(); ?>/assets/img/common/jcgon-redcap_logo.png"
-          alt="JCGON-ON REDCap事務局"
+          src="<?php echo get_template_directory_uri(); ?>/assets/img/common/jccgon-redcap_logo.png"
+          alt="JCCGON-ON REDCap事務局"
         >
       </div>
       <nav class="header__nav" id="js-nav">
