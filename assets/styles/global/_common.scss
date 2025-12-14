@@ -2,7 +2,19 @@
 
 @use "config" as g;
 
-// どのページにも適用する処理を記述
+html {
+  font-size: 62.5%;
+}
+
 body {
-  color: g.$font-color;
+  color: g.$text-color;
+  font-family: g.$main-fontJP;
+  letter-spacing: 0;
+  line-height: 1.2;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
 }
