@@ -1,0 +1,10 @@
+/*
+@useで読み込むこと
+*/
+@use "global/common";
+@use "global/config";
+@use "global/mixin";
+@use "global/reset";
+@use "components";
+@use "layouts";
+@use "libs";
