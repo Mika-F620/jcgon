@@ -14,6 +14,8 @@ function enqueue_scripts()
       array(), // style.cssより先に読み込むCSSは無いので配列は空
     );
 
+    wp_enqueue_script('front-page-js', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), '', true);
+
     // front-pageページのみ読み込むファイル
     if (((is_front_page() && is_home()) || (is_front_page() && ! is_home())) && ! is_paged()) {
       wp_enqueue_style(
