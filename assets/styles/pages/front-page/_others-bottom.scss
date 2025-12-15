@@ -1,0 +1,27 @@
+/** @format */
+
+@use "../../global/" as g;
+@use "sass:math";
+
+.topOthersBottom {
+  display: flex;
+  gap: 12px;
+
+  @include g.mq("pc") {
+    flex-direction: column;
+  }
+}
+
+.topOthersBottom__item {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex: 1;
+}
+
+.topOthersBottom__title {
+  font-size: clamp(2rem, 1.875vw, 2.4rem);
+  color: g.$main-color;
+  font-weight: bold;
+  text-align: center;
+}

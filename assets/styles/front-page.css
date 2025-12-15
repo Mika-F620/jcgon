@@ -652,4 +652,29 @@ th {
   .topOthers {
     gap: 24px;
   }
+}
+
+/** @format */
+.topOthersBottom {
+  display: flex;
+  gap: 12px;
+}
+@media screen and (max-width: 1024px) {
+  .topOthersBottom {
+    flex-direction: column;
+  }
+}
+
+.topOthersBottom__item {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex: 1;
+}
+
+.topOthersBottom__title {
+  font-size: clamp(2rem, 1.875vw, 2.4rem);
+  color: #0a6b00;
+  font-weight: bold;
+  text-align: center;
 }/*# sourceMappingURL=front-page.css.map */

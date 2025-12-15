@@ -16,6 +16,8 @@
 
     <?php get_template_part('component/front-page/others'); ?>
 
+    <?php get_template_part('component/front-page/others-bottom'); ?>
+
   </div>
 
 </div>
