@@ -24,4 +24,8 @@
   color: g.$main-color;
   font-weight: bold;
   text-align: center;
+
+  @include g.mq("sp") {
+    font-size: clamp(1.8rem, 4.166666666666666vw, 2rem);
+  }
 }

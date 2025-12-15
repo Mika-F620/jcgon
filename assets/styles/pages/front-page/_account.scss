@@ -46,6 +46,10 @@
     font-size: 2.4rem;
   }
 
+  @include g.mq("sp") {
+    font-size: clamp(2.1rem, 5vw, 2.4rem);
+  }
+
   &::after {
     content: '';
     background-repeat: no-repeat;
@@ -63,6 +67,11 @@
       width: 4.39453125vw;
       height: 4.39453125vw;
     }
+
+    @include g.mq("tab") {
+      width: 3.2rem;
+      height: 3.2rem;
+    }
   }
 }
 
@@ -75,6 +84,11 @@
     @include g.mq("pc") {
       width: 3.90625vw;
       height: 3.90625vw;
+    }
+
+    @include g.mq("tab") {
+      width: 3.2rem;
+      height: 3.2rem;
     }
   }
 }

@@ -35,6 +35,14 @@ body {
   flex-direction: column;
   gap: 80px;
   width: calc(100% - 312px);
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 480px) {
+    gap: 40px;
+  }
 }
 
 .section-title {
@@ -46,13 +54,18 @@ body {
   border-radius: 50px 0px 0px 50px;
   text-align: center;
   position: relative;
+  z-index: -1;
 
   @media screen and (max-width: 1024px) {
     font-size: 3.125vw;
   }
 
   @media screen and (max-width: 768px) {
-    font-size: 3.2rem;
+    font-size: clamp(2.8rem, 4.166666666666666vw, 3.2rem);
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: clamp(2rem, 5.833333333333333vw, 2.8rem);
   }
 
   &::before {
@@ -76,6 +89,10 @@ body {
   padding: 8px;
   border-radius: 50px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+  @media screen and (max-width: 480px) {
+    font-size: clamp(1.3rem, 3.75vw, 1.8rem);
+  }
 
   br {
     display: none;

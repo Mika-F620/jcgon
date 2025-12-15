@@ -15,6 +15,10 @@
   gap: 9px;
   align-items: flex-end;
   width: 280px;
+
+  @include g.mq("tab") {
+    display: none;
+  }
 }
 
 .topLink__link {

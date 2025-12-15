@@ -13,6 +13,15 @@
   padding: 16px 0;
   border-bottom: 1px solid g.$gray-color;
   transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  @include g.mq("pc") {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
 
   &:last-child {
     border-bottom: none;
@@ -40,12 +49,6 @@
     width: 32px;
     height: 32px;
   }
-}
-
-.topNews__line {
-  display: flex;
-  align-items: center;
-  gap: 24px;
 }
 
 .topNews__detailsTitle {
