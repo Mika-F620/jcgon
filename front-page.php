@@ -14,6 +14,8 @@
 
     <?php get_template_part('component/front-page/project'); ?>
 
+    <?php get_template_part('component/front-page/others'); ?>
+
   </div>
 
 </div>
