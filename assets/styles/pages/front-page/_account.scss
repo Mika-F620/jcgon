@@ -1,0 +1,86 @@
+/** @format */
+
+@use "../../global/" as g;
+@use "sass:math";
+
+.topAccount {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @include g.mq("sp") {
+    gap: 24px;
+  }
+}
+
+.topAccount__details {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @include g.mq("sp") {
+    gap: 24px;
+  }
+}
+
+.topAccount__item {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.topAccount__itemTitle {
+  font-size: 3.2rem;
+  color: g.$text-color;
+  font-weight: bold;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+
+  @include g.mq("pc") {
+    font-size: 2.34375vw;
+  }
+
+  @include g.mq("tab") {
+    font-size: 2.4rem;
+  }
+
+  &::after {
+    content: '';
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.topAccount__itemTitle--beginner {
+  &::after {
+    background-image: url('../img/pages/front-page/beginner-icon.svg');
+    width: 45px;
+    height: 45px;
+
+    @include g.mq("pc") {
+      width: 4.39453125vw;
+      height: 4.39453125vw;
+    }
+  }
+}
+
+.topAccount__itemTitle--person {
+  &::after {
+    background-image: url('../img/pages/front-page/person-icon.svg');
+    width: 40px;
+    height: 40px;
+
+    @include g.mq("pc") {
+      width: 3.90625vw;
+      height: 3.90625vw;
+    }
+  }
+}
+
+.topAccount__flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

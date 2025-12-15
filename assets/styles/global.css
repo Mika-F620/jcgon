@@ -29,12 +29,70 @@ body {
 .main__contents {
   display: flex;
   gap: 32px;
+  align-items: flex-start;
 }
 
 .main__details {
   display: flex;
   flex-direction: column;
   gap: 80px;
+  width: calc(100% - 312px);
+}
+
+.section-title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #333;
+  padding: 8px;
+  background-color: #ffebb7;
+  border-radius: 50px 0px 0px 50px;
+  text-align: center;
+  position: relative;
+}
+@media screen and (max-width: 1024px) {
+  .section-title {
+    font-size: 3.125vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .section-title {
+    font-size: 3.2rem;
+  }
+}
+.section-title::before {
+  position: absolute;
+  content: "●";
+  color: #fff;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 18px;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  background-color: #0a6b00;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 8px;
+  border-radius: 50px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.btn br {
+  display: none;
+}
+@media screen and (max-width: 1024px) {
+  .btn br {
+    display: block;
+  }
+}
+
+.btn-box {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 /** @format */

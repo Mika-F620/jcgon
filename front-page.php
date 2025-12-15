@@ -10,6 +10,8 @@
 
     <?php get_template_part('component/front-page/news'); ?>
 
+    <?php get_template_part('component/front-page/account'); ?>
+
   </div>
 
 </div>
