@@ -12,6 +12,8 @@
 
     <?php get_template_part('component/front-page/account'); ?>
 
+    <?php get_template_part('component/front-page/project'); ?>
+
   </div>
 
 </div>

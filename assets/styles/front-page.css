@@ -628,4 +628,16 @@ th {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+/** @format */
+.topProject {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+@media screen and (max-width: 480px) {
+  .topProject {
+    gap: 24px;
+  }
 }/*# sourceMappingURL=front-page.css.map */
