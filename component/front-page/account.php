@@ -1,4 +1,4 @@
-<section class="topAccount">
+<section class="topAccount" id="account">
   <h2 class="section-title">REDCapアカウント</h2>
   <div class="topAccount__details">
     <div class="topAccount__item">

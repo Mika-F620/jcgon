@@ -1,5 +1,5 @@
 <section class="topOthersBottom">
-  <div class="topOthersBottom__item">
+  <div class="topOthersBottom__item" id="observation">
     <h2 class="topOthersBottom__title">小児固形腫瘍観察研究</h2>
     <div class="btn-box">
       <a class="btn" href="#">施設ログイン</a>
@@ -7,7 +7,7 @@
       <a class="btn" href="#">倫理審査書類、検体提出の手引き</a>
     </div>
   </div>
-  <div class="topOthersBottom__item">
+  <div class="topOthersBottom__item" id="image">
     <h2 class="topOthersBottom__title">画像診断／コンサルテーション</h2>
     <div class="btn-box">
       <a class="btn" href="#">施設ログイン</a>

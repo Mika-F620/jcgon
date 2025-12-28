@@ -1,4 +1,4 @@
-<section class="topProject">
+<section class="topProject" id="project">
   <h2 class="section-title">REDCapプロジェクト</h2>
   <div class="btn-box">
     <a class="btn" href="#">アクセス権（新規申請）</a>

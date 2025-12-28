@@ -24,6 +24,27 @@ body {
   }
 }
 
+.main {
+  background-image: url('../img/pages/front-page/blue-bg.png'), url('../img/pages/front-page/pink-bg.png'), url('../img/pages/front-page/orange-bg.png'), url('../img/pages/front-page/purple-bg.png');
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: top left, top 24vw right, bottom 43vw left, bottom right;
+  background-size: 14.0625vw, 11.71875vw, 11.71875vw, 14.0625vw;
+  position: relative;
+  z-index: 0;
+
+  @media screen and (max-width: 1024px) {
+    background-position: top left, top 35vw right, bottom 43vw left, bottom right;
+  }
+
+  @media screen and (max-width: 768px) {
+    background-position: top left, top 42vw right, bottom 85vw left, bottom right;
+  }
+
+  @media screen and (max-width: 480px) {
+    background-position: top left, top 55vw right, bottom 125vw left, bottom right;
+  }
+}
+
 .main__contents {
   display: flex;
   gap: 32px;

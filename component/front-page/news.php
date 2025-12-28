@@ -1,4 +1,4 @@
-<section class="topNews">
+<section class="topNews" id="news">
   <h2 class="topNews__title">What’s New</h2>
   <dl class="topNews__details">
     <?php

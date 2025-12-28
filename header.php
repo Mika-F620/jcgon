@@ -26,33 +26,33 @@
       </div>
       <nav class="header__nav" id="js-nav">
         <ul class="header__menu">
-          <li class="header__list <?php echo is_page('about') ? 'is-current' : ''; ?>">
-            <a class="header__link" href="<?php echo esc_url(home_url('/')); ?>about">
+          <li class="header__list">
+            <a class="header__link" href="<?php echo esc_url(home_url('/')); ?>#news">
               What’s New
             </a>
           </li>
-          <li class="header__list <?php echo is_page('works') ? 'is-current' : ''; ?>">
-            <a class="header__link" href="<?php echo esc_url(home_url('/')); ?>works">
+          <li class="header__list">
+            <a class="header__link" href="<?php echo esc_url(home_url('/')); ?>#account">
               REDCapアカウント
             </a>
           </li>
           <li class="header__list">
-            <a class="header__link" href="#">
+            <a class="header__link" href="<?php echo esc_url(home_url('/')); ?>#project">
               REDCapプロジェクト
             </a>
           </li>
           <li class="header__list">
-            <a class="header__link" href="#">
+            <a class="header__link" href="<?php echo esc_url(home_url('/')); ?>#others">
               REDCapその他
             </a>
           </li>
           <li class="header__list">
-            <a class="header__link" href="#">
+            <a class="header__link" href="<?php echo esc_url(home_url('/')); ?>#observation">
               小児固形腫瘍観察研究
             </a>
           </li>
           <li class="header__list">
-            <a class="header__link" href="#">
+            <a class="header__link" href="<?php echo esc_url(home_url('/')); ?>#image">
               画像診断／コンサルテーション
             </a>
           </li>
