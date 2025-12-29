@@ -129,3 +129,146 @@ body {
   flex-direction: column;
   gap: 16px;
 }
+
+// FAQ
+.faqWidget{
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  width: 194px;
+  z-index: 9999;
+  border-radius: 100px;
+  overflow: hidden;
+  box-shadow: 0 4px 9px rgba(0,0,0,0.25);
+  background: #fff;
+  transition: all 0.4s;
+
+  @media screen and (max-width: 768px) {
+    width: 58px;
+  }
+}
+
+.faqWidget.is-open {
+  border-radius: 8px;
+  width: min(320px, calc(100vw - 32px));
+}
+
+.faqWidget__header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  background: g.$main-color;
+  color: g.$white-color;
+  border: 0;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.faqWidget.is-open .faqWidget__header {
+  padding: 16px;
+}
+
+.faqWidget__toggleIcon {
+  width: 42px;
+}
+
+.faqWidget.is-open .faqWidget__toggleIcon {
+  display: none;
+}
+
+.faqWidget__title {
+  font-size: 1.6rem;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.faqWidget.is-open .faqWidget__title {
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+}
+
+.faqWidget__body{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .25s ease;
+  background: g.$white-color;
+}
+
+.faqWidget.is-open .faqWidget__body{
+  max-height: 100vh; /* 展開時の最大高さ */
+}
+
+.faqWidget__msg{
+  display: flex;
+  gap: 8px;
+  padding: 24px 16px 0;
+}
+
+.faqWidget__msgImg {
+  max-width: 45px;
+  width: 100%;
+}
+
+.faqWidget__msgText {
+  font-size: 1.4rem;
+  color: g.$text-color;
+  background-color: g.$bubble-bg;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.faqWidget__content{
+  padding: 12px 12px 14px;
+}
+
+.faqWidget__list{
+  display: grid;
+  gap: 10px;
+}
+
+.faqWidget__item{
+  width: 100%;
+  text-align: left;
+  border: 0;
+  cursor: pointer;
+  padding: 14px 12px;
+  border-radius: 12px;
+  background: #f6f6f6;
+  font-size: 14px;
+}
+
+.faqWidget__answer{
+  padding: 14px 12px;
+  border-radius: 12px;
+  background: #f6f6f6;
+  font-size: 14px;
+  line-height: 1.6;
+
+  a {
+    word-break: break-all;
+    color: g.$blue-color;
+    text-decoration: underline;
+  }
+}
+
+.faqWidget__footer{
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  justify-content: flex-end;
+}
+
+.faqWidget__back,
+.faqWidget__reset{
+  border: 0;
+  cursor: pointer;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: #ececec;
+  font-size: 13px;
+}
