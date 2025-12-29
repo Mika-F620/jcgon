@@ -1,3 +1,156 @@
 /** @format */
 
 @use "../global/" as g;
+
+.header {
+  box-shadow: 0 4px 0 rgba(51, 51, 51, 0.25);
+  position: sticky;
+  z-index: 99;
+  background-color: g.$white-color;
+  top: 0;
+}
+
+.header__contents {
+  padding: 16px 50px;
+  width: 100%;
+  margin: 0 auto;
+
+  @include g.mq("tab") {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 16px 24px;
+  }
+
+  @include g.mq("sp") {
+    padding: 16px 16px;
+  }
+}
+
+.header__logo {
+  display: flex;
+  gap: 24px;
+
+  @include g.mq("pc") {
+    gap: 2.34375vw;
+  }
+}
+
+.header__logoImg {
+  width: 100%;
+
+  &:first-child {
+    max-width: 351px;
+
+    @include g.mq("pc") {
+      max-width: 34.27734375vw;
+    }
+  }
+
+  &:last-child {
+    max-width: 296px;
+
+    @include g.mq("pc") {
+      max-width: 28.90625vw;
+    }
+  }
+}
+
+.header__nav {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: var(--header-height);
+  width: 100%;
+  height: 100vh;
+  transform: translateX(100%);
+  background-color: g.$white-color;
+  transition: ease 0.2s;
+  flex-direction: column;
+  padding: 40px 20px 0px;
+  gap: 8px;
+  overflow: auto;
+  z-index: 99;
+}
+
+.header__nav.active {
+  transform: translateX(0);
+}
+
+.header__hamburgerBtn {
+  display: none;
+  width:32px;
+  height: 32px;
+  cursor: pointer;
+
+  @include g.mq("tab") {
+    display: block;
+  }
+
+  span {
+    width: 100%;
+    height: 2px;
+    background-color: g.$text-color;
+    position: relative;
+    transition: ease 0.2s;
+    display: block;
+
+    &:nth-child(1) {
+      top: 9.9px;
+    }
+  
+    &:nth-child(2) {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  
+    &:nth-child(3) {
+      top: 20.9px;
+    }
+  }
+}
+
+.header__contents.active {
+  transform: translateX(0);
+}
+
+.header__hamburgerBtn.active {
+  span {
+    &:nth-child(1) {
+      top: 15px;
+      transform: rotate(45deg);
+    }
+  
+    &:nth-child(2) {
+      opacity: 0;
+    }
+  
+    &:nth-child(3) {
+      top: 10.5px;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.header__link {
+  padding: 20px;
+  font-size: 1.8rem;
+  color: g.$text-color;
+  position: relative;
+  display: block;
+  border-bottom: 2px solid g.$gray-color;
+
+  &::after {
+    position: absolute;
+    content: '';
+    background-image: url('../img/common/right-arrow.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 24px;
+    height: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+  }
+}

@@ -1,0 +1,14 @@
+/** @format */
+
+@use "../../global/" as g;
+@use "sass:math";
+
+.topProject {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @include g.mq("sp") {
+    gap: 24px;
+  }
+}

@@ -2,7 +2,273 @@
 
 @use "config" as g;
 
-// どのページにも適用する処理を記述
+html {
+  font-size: 62.5%;
+}
+
 body {
-  color: g.$font-color;
+  color: g.$text-color;
+  font-family: g.$main-fontJP;
+  letter-spacing: 0;
+  line-height: 1.2;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 80px 40px;
+
+  @media screen and (max-width: 480px) {
+    padding: 40px 16px;
+  }
+}
+
+.main {
+  background-image: url('../img/pages/front-page/blue-bg.png'), url('../img/pages/front-page/pink-bg.png'), url('../img/pages/front-page/orange-bg.png'), url('../img/pages/front-page/purple-bg.png');
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: top left, top 24vw right, bottom 43vw left, bottom right;
+  background-size: 14.0625vw, 11.71875vw, 11.71875vw, 14.0625vw;
+  position: relative;
+  z-index: 0;
+
+  @media screen and (max-width: 1024px) {
+    background-position: top left, top 35vw right, bottom 43vw left, bottom right;
+  }
+
+  @media screen and (max-width: 768px) {
+    background-position: top left, top 42vw right, bottom 85vw left, bottom right;
+  }
+
+  @media screen and (max-width: 480px) {
+    background-position: top left, top 55vw right, bottom 125vw left, bottom right;
+  }
+}
+
+.main__contents {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.main__details {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  width: calc(100% - 312px);
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 480px) {
+    gap: 40px;
+  }
+}
+
+.section-title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: g.$text-color;
+  padding: 8px;
+  background-color: g.$heading-bg;
+  border-radius: 50px 0px 0px 50px;
+  text-align: center;
+  position: relative;
+  z-index: -1;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 3.125vw;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: clamp(2.8rem, 4.166666666666666vw, 3.2rem);
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: clamp(2rem, 5.833333333333333vw, 2.8rem);
+  }
+
+  &::before {
+    position: absolute;
+    content: '●';
+    color: g.$white-color;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 18px;
+  }
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  background-color: g.$main-color;
+  color: g.$white-color;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 8px;
+  border-radius: 50px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+  @media screen and (max-width: 480px) {
+    font-size: clamp(1.3rem, 3.75vw, 1.8rem);
+  }
+
+  br {
+    display: none;
+
+    @media screen and (max-width: 1024px) {
+      display: block;
+    }
+  }
+}
+
+.btn-box {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+// FAQ
+.faqWidget{
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  width: 194px;
+  z-index: 9999;
+  border-radius: 100px;
+  overflow: hidden;
+  box-shadow: 0 4px 9px rgba(0,0,0,0.25);
+  background: #fff;
+  transition: all 0.4s;
+
+  @media screen and (max-width: 768px) {
+    width: 58px;
+  }
+}
+
+.faqWidget.is-open {
+  border-radius: 8px;
+  width: min(320px, calc(100vw - 32px));
+}
+
+.faqWidget__header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  background: g.$main-color;
+  color: g.$white-color;
+  border: 0;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.faqWidget.is-open .faqWidget__header {
+  padding: 16px;
+}
+
+.faqWidget__toggleIcon {
+  width: 42px;
+}
+
+.faqWidget.is-open .faqWidget__toggleIcon {
+  display: none;
+}
+
+.faqWidget__title {
+  font-size: 1.6rem;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.faqWidget.is-open .faqWidget__title {
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+}
+
+.faqWidget__body{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .25s ease;
+  background: g.$white-color;
+}
+
+.faqWidget.is-open .faqWidget__body{
+  max-height: 100vh; /* 展開時の最大高さ */
+}
+
+.faqWidget__msg{
+  display: flex;
+  gap: 8px;
+  padding: 24px 16px 0;
+}
+
+.faqWidget__msgImg {
+  max-width: 45px;
+  width: 100%;
+}
+
+.faqWidget__msgText {
+  font-size: 1.4rem;
+  color: g.$text-color;
+  background-color: g.$bubble-bg;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.faqWidget__content{
+  padding: 12px 12px 14px;
+}
+
+.faqWidget__list{
+  display: grid;
+  gap: 10px;
+}
+
+.faqWidget__item{
+  width: 100%;
+  text-align: left;
+  border: 0;
+  cursor: pointer;
+  padding: 14px 12px;
+  border-radius: 12px;
+  background: #f6f6f6;
+  font-size: 14px;
+}
+
+.faqWidget__answer{
+  padding: 14px 12px;
+  border-radius: 12px;
+  background: #f6f6f6;
+  font-size: 14px;
+  line-height: 1.6;
+
+  a {
+    word-break: break-all;
+    color: g.$blue-color;
+    text-decoration: underline;
+  }
+}
+
+.faqWidget__footer{
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  justify-content: flex-end;
+}
+
+.faqWidget__back,
+.faqWidget__reset{
+  border: 0;
+  cursor: pointer;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: #ececec;
+  font-size: 13px;
 }
