@@ -10,7 +10,7 @@
     ?>
     <?php if ($the_query->have_posts()): ?>
       <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-        <a class="topNews__line">
+        <a class="topNews__line" href="<?php the_permalink(); ?>">
           <dt class="topNews__detailsTitle"><?php echo get_the_date('Y.m.d'); ?></dt>
           <dd class="topNews__detailsContent"><?php the_title(); ?></dd>
         </a>
