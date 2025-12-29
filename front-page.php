@@ -2,25 +2,25 @@
 
 <main class="main">
 
-<div class="main__contents wrapper">
+  <div class="main__contents wrapper">
 
-  <?php get_template_part('component/front-page/link'); ?>
+    <?php get_template_part('component/front-page/link'); ?>
 
-  <div class="main__details">
+    <div class="main__details">
 
-    <?php get_template_part('component/front-page/news'); ?>
+      <?php get_template_part('component/front-page/news'); ?>
 
-    <?php get_template_part('component/front-page/account'); ?>
+      <?php get_template_part('component/front-page/account'); ?>
 
-    <?php get_template_part('component/front-page/project'); ?>
+      <?php get_template_part('component/front-page/project'); ?>
 
-    <?php get_template_part('component/front-page/others'); ?>
+      <?php get_template_part('component/front-page/others'); ?>
 
-    <?php get_template_part('component/front-page/others-bottom'); ?>
+      <?php get_template_part('component/front-page/others-bottom'); ?>
 
+    </div>
+    
   </div>
-
-</div>
 
 </main>
 
