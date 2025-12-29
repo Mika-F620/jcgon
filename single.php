@@ -1,2 +1,11 @@
-<!-- 通常投稿の個別ページ -->
-<!-- 主にポートフォリオの個別詳細ページを実装 -->
+<?php get_header(); ?>
+
+<main>
+
+<?php get_template_part('component/news/contents'); ?>
+
+</main>
+
+<?php get_footer(); ?>
+
+<?php get_template_part('component/common/faq'); ?>
