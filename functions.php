@@ -38,8 +38,8 @@ function enqueue_scripts()
     // 通常の投稿のシングルページにだけ適用したい処理
     if (is_single()) {
       wp_enqueue_style(
-        'single', // singleという名前を設定
-        get_template_directory_uri().'/assets/styles/single.css', // パス
+        'news', // singleという名前を設定
+        get_template_directory_uri().'/assets/styles/news.css', // パス
         array('global'), // global.cssより後に読み込む
       );
     }
