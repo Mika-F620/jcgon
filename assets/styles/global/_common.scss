@@ -13,6 +13,14 @@ body {
   line-height: 1.2;
 }
 
+a {
+  transition: all 0.2s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
 .wrapper {
   width: 100%;
   max-width: 1160px;
@@ -122,6 +130,10 @@ body {
       display: block;
     }
   }
+}
+
+.btn__link {
+  border-bottom: 1px solid g.$white-color;
 }
 
 .btn-box {

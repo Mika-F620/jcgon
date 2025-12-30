@@ -13,16 +13,20 @@
   <header class="header">
     <div class="header__contents">
       <div class="header__logo">
-        <img
-          class="header__logoImg"
-          src="<?php echo get_template_directory_uri(); ?>/assets/img/common/jccgon_logo.png"
-          alt="JCCGON"
-        >
-        <img
-          class="header__logoImg"
-          src="<?php echo get_template_directory_uri(); ?>/assets/img/common/jccgon-redcap_logo.png"
-          alt="JCCGON-ON REDCap事務局"
-        >
+        <a class="header__logoLink" href="https://jccg.jp/" target="_blank" rel="noopener noreferrer">
+          <img
+            class="header__logoImg"
+            src="<?php echo get_template_directory_uri(); ?>/assets/img/common/jccgon_logo.png"
+            alt="JCCGON"
+          >
+        </a>
+        <a class="header__logoLink" href="https://www.project-redcap.org/" target="_blank" rel="noopener noreferrer">
+          <img
+            class="header__logoImg"
+            src="<?php echo get_template_directory_uri(); ?>/assets/img/common/jccgon-redcap_logo.png"
+            alt="JCCGON-ON REDCap事務局"
+          >
+        </a>
       </div>
       <nav class="header__nav" id="js-nav">
         <ul class="header__menu">

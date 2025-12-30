@@ -16,7 +16,7 @@
         </a>
       <?php endwhile;?>
     <?php else : ?>
-      <p>お知らせはありません</p>
+      <p class="topNews__none">お知らせはありません</p>
     <?php endif; wp_reset_postdata(); ?>
   </dl>
 </section>

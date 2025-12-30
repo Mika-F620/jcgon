@@ -14,6 +14,13 @@ body {
   line-height: 1.2;
 }
 
+a {
+  transition: all 0.2s;
+}
+a:hover {
+  opacity: 0.7;
+}
+
 .wrapper {
   width: 100%;
   max-width: 1160px;
@@ -132,6 +139,10 @@ body {
   .btn br {
     display: block;
   }
+}
+
+.btn__link {
+  border-bottom: 1px solid #fff;
 }
 
 .btn-box {
@@ -709,24 +720,25 @@ th {
   }
 }
 
-.header__logoImg {
-  width: 100%;
-}
-.header__logoImg:first-child {
+.header__logoLink:first-child {
   max-width: 351px;
 }
 @media screen and (max-width: 1024px) {
-  .header__logoImg:first-child {
+  .header__logoLink:first-child {
     max-width: 34.27734375vw;
   }
 }
-.header__logoImg:last-child {
+.header__logoLink:last-child {
   max-width: 296px;
 }
 @media screen and (max-width: 1024px) {
-  .header__logoImg:last-child {
+  .header__logoLink:last-child {
     max-width: 28.90625vw;
   }
+}
+
+.header__logoImg {
+  width: 100%;
 }
 
 .header__nav {
@@ -858,24 +870,25 @@ th {
   }
 }
 
-.footer__logoImg {
-  width: 100%;
-}
-.footer__logoImg:first-child {
+.footer__logoLink:first-child {
   max-width: 145px;
 }
 @media screen and (max-width: 768px) {
-  .footer__logoImg:first-child {
+  .footer__logoLink:first-child {
     max-width: 18.8802083333vw;
   }
 }
-.footer__logoImg:last-child {
+.footer__logoLink:last-child {
   max-width: 235px;
 }
 @media screen and (max-width: 768px) {
-  .footer__logoImg:last-child {
+  .footer__logoLink:last-child {
     max-width: 30.5989583333vw;
   }
+}
+
+.footer__logoImg {
+  width: 100%;
 }
 
 .footer__link {

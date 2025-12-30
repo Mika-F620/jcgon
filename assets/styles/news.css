@@ -12,6 +12,13 @@ body {
   line-height: 1.2;
 }
 
+a {
+  transition: all 0.2s;
+}
+a:hover {
+  opacity: 0.7;
+}
+
 .wrapper {
   width: 100%;
   max-width: 1160px;
@@ -130,6 +137,10 @@ body {
   .btn br {
     display: block;
   }
+}
+
+.btn__link {
+  border-bottom: 1px solid #fff;
 }
 
 .btn-box {
@@ -784,4 +795,10 @@ th {
 }
 .newsContents__text img {
   display: block;
+}
+
+.newsContents__btn {
+  width: fit-content;
+  margin: 0 auto;
+  padding: 16px;
 }/*# sourceMappingURL=news.css.map */

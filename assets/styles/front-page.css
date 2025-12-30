@@ -12,6 +12,13 @@ body {
   line-height: 1.2;
 }
 
+a {
+  transition: all 0.2s;
+}
+a:hover {
+  opacity: 0.7;
+}
+
 .wrapper {
   width: 100%;
   max-width: 1160px;
@@ -130,6 +137,10 @@ body {
   .btn br {
     display: block;
   }
+}
+
+.btn__link {
+  border-bottom: 1px solid #fff;
 }
 
 .btn-box {
@@ -763,6 +774,11 @@ th {
 
 .topNews__detailsContent {
   font-size: 1.8rem;
+  color: #333;
+}
+
+.topNews__none {
+  font-size: 1.6rem;
   color: #333;
 }
 
