@@ -659,4 +659,108 @@ th {
 th {
   text-align: left;
   font-weight: bold;
+}
+
+.accessList__contents {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+@media screen and (max-width: 480px) {
+  .accessList__contents {
+    gap: 24px;
+  }
+}
+
+.accessList__title {
+  font-size: 4rem;
+  color: #0a6b00;
+  font-weight: bold;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .accessList__title {
+    font-size: 3.2rem;
+  }
+}
+.accessList__title br {
+  display: none;
+}
+@media screen and (max-width: 480px) {
+  .accessList__title br {
+    display: block;
+  }
+}
+
+.accessList__details {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+@media screen and (max-width: 480px) {
+  .accessList__details {
+    gap: 24px;
+  }
+}
+
+.accessList__item {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+@media screen and (max-width: 480px) {
+  .accessList__item {
+    gap: 20px;
+  }
+}
+
+.accessList__itemTitle {
+  font-size: 3.2rem;
+  color: #333;
+  font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+  .accessList__itemTitle {
+    font-size: 2.4rem;
+  }
+}
+
+.accessList__itemList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.accessList__itemLinkbox {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #ddd;
+}
+.accessList__itemLinkbox:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.accessList__itemLink {
+  font-size: 1.8rem;
+  color: #0000ff;
+  text-decoration: underline;
+}
+
+.accessList__itemLinkText {
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.accessList__itemText {
+  font-size: 1.6rem;
+  color: #333;
+}
+
+.accessList__itemNote {
+  font-size: 1.8rem;
+  color: #333;
+  font-weight: bold;
 }/*# sourceMappingURL=access.css.map */

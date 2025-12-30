@@ -2,6 +2,8 @@
 
 <main>
 
+<?php get_template_part('component/access/list'); ?>
+
 </main>
 
 <?php get_footer(); ?>
