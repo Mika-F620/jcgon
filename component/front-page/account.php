@@ -22,8 +22,10 @@
     <div class="topAccount__item">
       <h3 class="topAccount__itemTitle topAccount__itemTitle--person">アカウントをお持ちの方</h3>
       <div class="btn-box">
-        <a class="btn" href="#">アカウント登録情報の変更<br>（異動された場合など）</a>
-        <a class="btn" href="#">その他、アカウントに関するお問い合わせ</a>
+        <p class="btn">アカウント登録情報の変更<br>（異動された場合など）</p>
+        <p class="btn-note">※現在準備中です。ご連絡はJCCG-ON REDCap事務局（jccg.rc@ncchd.go.jp）までご連絡ください。</p>
+        <p class="btn">その他、アカウントに関するお問い合わせ</p>
+        <p class="btn-note">※現在準備中です。ご連絡はJCCG-ON REDCap事務局（jccg.rc@ncchd.go.jp）までご連絡ください。</p>
       </div>
     </div>
   </div>

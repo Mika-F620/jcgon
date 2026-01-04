@@ -151,6 +151,12 @@ a:hover {
   gap: 16px;
 }
 
+.btn-note {
+  font-size: 1.4rem;
+  color: #ff0000;
+  font-weight: bold;
+}
+
 .faqWidget {
   position: fixed;
   right: 16px;
