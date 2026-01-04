@@ -21,6 +21,10 @@
   font-size: 2.4rem;
   color: g.$white-color;
 
+  @include g.mq("tab") {
+    font-size: 1.6rem;
+  }
+
   br {
     display: none;
 
@@ -66,4 +70,8 @@
   color: g.$white-color;
   text-decoration: underline;
   width: fit-content;
+
+  @include g.mq("tab") {
+    font-size: 1.6rem;
+  }
 }

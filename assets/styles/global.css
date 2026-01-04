@@ -857,6 +857,11 @@ th {
   font-size: 2.4rem;
   color: #fff;
 }
+@media screen and (max-width: 768px) {
+  .footer__text {
+    font-size: 1.6rem;
+  }
+}
 .footer__text br {
   display: none;
 }
@@ -902,6 +907,11 @@ th {
   color: #fff;
   text-decoration: underline;
   width: fit-content;
+}
+@media screen and (max-width: 768px) {
+  .footer__link {
+    font-size: 1.6rem;
+  }
 }
 
 /** @format */
