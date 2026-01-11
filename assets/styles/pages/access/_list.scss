@@ -1,0 +1,110 @@
+/** @format */
+
+@use "../../global/" as g;
+@use "sass:math";
+
+.accessList__contents {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @include g.mq("sp") {
+    gap: 24px;
+  }
+}
+
+.accessList__title {
+  font-size: 4rem;
+  color: g.$main-color;
+  font-weight: bold;
+  text-align: center;
+
+  @include g.mq("tab") {
+    font-size: 3.2rem;
+  }
+
+  br {
+    display: none;
+
+    @include g.mq("sp") {
+      display: block;
+    }
+  }
+}
+
+.accessList__details {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @include g.mq("sp") {
+    gap: 24px;
+  }
+}
+
+.accessList__item {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  @include g.mq("sp") {
+    gap: 20px;
+  }
+}
+
+.accessList__itemTitle {
+  font-size: 3.2rem;
+  color: g.$text-color;
+  font-weight: bold;
+
+  @include g.mq("tab") {
+    font-size: 2.4rem;
+  }
+}
+
+.accessList__itemList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.accessList__itemLinkbox {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid g.$gray-color;
+
+  &:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
+
+.accessList__itemLink {
+  font-size: 1.8rem;
+  color: g.$blue-color;
+  text-decoration: underline;
+}
+
+.accessList__itemLinkText {
+  font-size: 1.8rem;
+  color: g.$text-color;
+}
+
+.accessList__itemText {
+  font-size: 1.6rem;
+  color: g.$text-color;
+}
+
+.accessList__itemNote {
+  font-size: 1.8rem;
+  color: g.$text-color;
+  font-weight: bold;
+}
+
+.accessList__btn {
+  width: fit-content;
+  margin: 0 auto;
+  padding: 16px;
+}

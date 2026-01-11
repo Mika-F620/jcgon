@@ -688,259 +688,112 @@ th {
   font-weight: bold;
 }
 
-.topLink {
-  background-color: #fff;
-  position: sticky;
-  top: 150px;
-  box-shadow: 0 0 8px rgba(51, 51, 51, 0.25);
-  padding: 32px 16px 32px 24px;
-  border-radius: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 9px;
-  align-items: flex-end;
-  width: 280px;
-}
-@media screen and (max-width: 768px) {
-  .topLink {
-    display: none;
-  }
-}
-
-.topLink__link {
-  font-size: 1.6rem;
-  color: #333;
-  position: relative;
-  padding-right: 15px;
-}
-.topLink__link::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 50%;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #0a6b00;
-  transform: translateY(-50%);
-  opacity: 0;
-  margin-top: 1.5px;
-}
-
-.topLink__link.is-active {
-  color: #0a6b00;
-}
-
-.topLink__link.is-active::after {
-  opacity: 1;
-}
-
-/** @format */
-.topNews {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.topNews__line {
-  padding: 16px 0;
-  border-bottom: 1px solid #ddd;
-  transition: all 0.2s;
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
-@media screen and (max-width: 1024px) {
-  .topNews__line {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
-  }
-}
-.topNews__line:last-child {
-  border-bottom: none;
-}
-.topNews__line:hover {
-  opacity: 0.7;
-}
-
-.topNews__title {
-  font-size: 2.4rem;
-  color: #333;
-  font-weight: bold;
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  justify-content: center;
-}
-
-.topNews__detailsTitle {
-  font-size: 1.8rem;
-  color: #0a6b00;
-  width: 100px;
-}
-
-.topNews__detailsContent {
-  font-size: 1.8rem;
-  color: #333;
-}
-
-.topNews__none {
-  font-size: 1.6rem;
-  color: #333;
-}
-
-/** @format */
-.topAccount {
+.accessList__contents {
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
 @media screen and (max-width: 480px) {
-  .topAccount {
+  .accessList__contents {
     gap: 24px;
   }
 }
 
-.topAccount__details {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-@media screen and (max-width: 480px) {
-  .topAccount__details {
-    gap: 24px;
-  }
-}
-
-.topAccount__item {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.topAccount__itemTitle {
-  font-size: 3.2rem;
-  color: #333;
-  font-weight: bold;
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  justify-content: center;
-}
-@media screen and (max-width: 1024px) {
-  .topAccount__itemTitle {
-    font-size: 2.34375vw;
-  }
-}
-@media screen and (max-width: 768px) {
-  .topAccount__itemTitle {
-    font-size: 2.4rem;
-  }
-}
-@media screen and (max-width: 480px) {
-  .topAccount__itemTitle {
-    font-size: clamp(2.1rem, 5vw, 2.4rem);
-  }
-}
-.topAccount__itemTitle::after {
-  content: "";
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.topAccount__itemTitle--beginner::after {
-  background-image: url("../img/pages/front-page/beginner-icon.svg");
-  width: 45px;
-  height: 45px;
-}
-@media screen and (max-width: 1024px) {
-  .topAccount__itemTitle--beginner::after {
-    width: 4.39453125vw;
-    height: 4.39453125vw;
-  }
-}
-@media screen and (max-width: 768px) {
-  .topAccount__itemTitle--beginner::after {
-    width: 3.2rem;
-    height: 3.2rem;
-  }
-}
-
-.topAccount__itemTitle--person::after {
-  background-image: url("../img/pages/front-page/person-icon.svg");
-  width: 40px;
-  height: 40px;
-}
-@media screen and (max-width: 1024px) {
-  .topAccount__itemTitle--person::after {
-    width: 3.90625vw;
-    height: 3.90625vw;
-  }
-}
-@media screen and (max-width: 768px) {
-  .topAccount__itemTitle--person::after {
-    width: 3.2rem;
-    height: 3.2rem;
-  }
-}
-
-.topAccount__flow {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/** @format */
-.topProject {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-@media screen and (max-width: 480px) {
-  .topProject {
-    gap: 24px;
-  }
-}
-
-/** @format */
-.topOthers {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-@media screen and (max-width: 480px) {
-  .topOthers {
-    gap: 24px;
-  }
-}
-
-/** @format */
-.topOthersBottom {
-  display: flex;
-  gap: 12px;
-}
-@media screen and (max-width: 1024px) {
-  .topOthersBottom {
-    flex-direction: column;
-  }
-}
-
-.topOthersBottom__item {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  flex: 1;
-}
-
-.topOthersBottom__title {
-  font-size: clamp(2rem, 1.875vw, 2.4rem);
+.accessList__title {
+  font-size: 4rem;
   color: #0a6b00;
   font-weight: bold;
   text-align: center;
 }
-@media screen and (max-width: 480px) {
-  .topOthersBottom__title {
-    font-size: clamp(1.8rem, 4.1666666667vw, 2rem);
+@media screen and (max-width: 768px) {
+  .accessList__title {
+    font-size: 3.2rem;
   }
-}/*# sourceMappingURL=front-page.css.map */
+}
+.accessList__title br {
+  display: none;
+}
+@media screen and (max-width: 480px) {
+  .accessList__title br {
+    display: block;
+  }
+}
+
+.accessList__details {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+@media screen and (max-width: 480px) {
+  .accessList__details {
+    gap: 24px;
+  }
+}
+
+.accessList__item {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+@media screen and (max-width: 480px) {
+  .accessList__item {
+    gap: 20px;
+  }
+}
+
+.accessList__itemTitle {
+  font-size: 3.2rem;
+  color: #333;
+  font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+  .accessList__itemTitle {
+    font-size: 2.4rem;
+  }
+}
+
+.accessList__itemList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.accessList__itemLinkbox {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #ddd;
+}
+.accessList__itemLinkbox:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.accessList__itemLink {
+  font-size: 1.8rem;
+  color: #0000ff;
+  text-decoration: underline;
+}
+
+.accessList__itemLinkText {
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.accessList__itemText {
+  font-size: 1.6rem;
+  color: #333;
+}
+
+.accessList__itemNote {
+  font-size: 1.8rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.accessList__btn {
+  width: fit-content;
+  margin: 0 auto;
+  padding: 16px;
+}/*# sourceMappingURL=access.css.map */
