@@ -157,26 +157,42 @@ a {
 }
 
 // FAQ
-.faqWidget{
+.faqWrapper {
   position: fixed;
-  right: 16px;
-  bottom: 16px;
-  width: 194px;
+  bottom: 0;
+  background-color: rgba(241, 245, 248, 0.9);
+  padding: 16px;
+  width: 100%;
   z-index: 9999;
+
+  &:has(.is-open) {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 8px;
+  }
+}
+
+.faqWidget{
+  width: fit-content;
+  margin: 0 auto;
   border-radius: 100px;
   overflow: hidden;
   box-shadow: 0 4px 9px rgba(0,0,0,0.25);
-  background: #fff;
+  background: g.$white-color;
   transition: all 0.4s;
 
-  @media screen and (max-width: 768px) {
-    width: 58px;
+  @media screen and (max-width: 480px) {
+    width: 100%;
   }
 }
 
 .faqWidget.is-open {
   border-radius: 8px;
-  width: min(320px, calc(100vw - 32px));
 }
 
 .faqWidget__header {
@@ -185,8 +201,8 @@ a {
   align-items: center;
   gap: 8px;
   padding: 8px;
-  background: g.$main-color;
-  color: g.$white-color;
+  background: g.$yellow-color;
+  color: g.$main-color;
   border: 0;
   cursor: pointer;
   font-weight: 700;
@@ -205,14 +221,46 @@ a {
 }
 
 .faqWidget__title {
-  font-size: 1.6rem;
+  font-size: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 95%;
+  margin: 0 auto;
+
+  &::before {
+    content: '';
+    background-image: url('../img/common/faq-img.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 45px;
+    height: 50px;
+  }
+
+  &::after {
+    content: '';
+    background-image: url('../img/common/right-arrow.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+  }
 
   @media screen and (max-width: 768px) {
-    display: none;
+    font-size: 2rem;
   }
 }
 
 .faqWidget.is-open .faqWidget__title {
+  &::before {
+    content: none;
+  }
+
+  &::after {
+    content: none;
+  }
+
   @media screen and (max-width: 768px) {
     display: block;
   }
@@ -290,7 +338,8 @@ a {
 }
 
 .faqWidget__back,
-.faqWidget__reset{
+.faqWidget__reset,
+.faqWidget__close {
   border: 0;
   cursor: pointer;
   padding: 10px 12px;

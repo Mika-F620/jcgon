@@ -184,8 +184,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const listEl = document.getElementById("faqList");
   const backBtn = document.getElementById("faqBack");
   const resetBtn = document.getElementById("faqReset");
+  const closeBtn = document.getElementById("faqClose");
 
-  if (!widget || !toggle || !listEl || !backBtn || !resetBtn) return;
+  if (!widget || !toggle || !listEl || !backBtn || !resetBtn || !closeBtn) return;
 
   // ▼ 分岐データ（ここを増やす）
   // type: "menu" = 選択肢
@@ -437,8 +438,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  toggle.addEventListener("click", () => {
+  toggle.addEventListener("click", (e) => {
+    e.stopPropagation();
     setOpen(!widget.classList.contains("is-open"));
+  });
+
+  // ★FAQウィジェット内のクリックは外側判定に伝播させない
+  widget.addEventListener("click", (e) => {
+    e.stopPropagation();
   });
 
   const render = (nodeKey) => {
@@ -497,6 +504,29 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   resetBtn.addEventListener("click", () => {
+    historyStack.length = 0;
+    render("start");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    setOpen(false);
+
+    // 閉じたら中身も初期状態に戻したい場合（おすすめ）
+    historyStack.length = 0;
+    render("start");
+  });
+
+  document.addEventListener("click", (e) => {
+    // 開いてないなら何もしない
+    if (!widget.classList.contains("is-open")) return;
+
+    // faqWidget の中をクリックしたなら閉じない
+    if (widget.contains(e.target)) return;
+
+    // 外側をクリックした → 閉じる
+    setOpen(false);
+
+    // 閉じたら中身も初期化したい場合（今の挙動と合わせる）
     historyStack.length = 0;
     render("start");
   });
