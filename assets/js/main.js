@@ -433,7 +433,7 @@ document.addEventListener("DOMContentLoaded", () => {
     widget.setAttribute("aria-expanded", open ? "true" : "false");
 
     if (titleEl) {
-      titleEl.textContent = open ? "質問回答集" : "ご質問はこちら";
+      titleEl.textContent = open ? "よくあるご質問" : "ご質問はこちら";
     }
   };
 

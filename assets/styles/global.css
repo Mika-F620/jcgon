@@ -120,16 +120,26 @@ a:hover {
   width: 100%;
   background-color: #0a6b00;
   color: #fff;
-  font-size: 1.8rem;
+  font-size: clamp(1.7rem, 1.40625vw, 1.8rem);
   font-weight: bold;
   text-align: center;
   padding: 8px;
   border-radius: 50px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
+@media screen and (max-width: 1024px) {
+  .btn {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .btn {
+    font-size: 1.7rem;
+  }
+}
 @media screen and (max-width: 480px) {
   .btn {
-    font-size: clamp(1.3rem, 3.75vw, 1.8rem);
+    font-size: clamp(1.2rem, 3.75vw, 1.8rem);
   }
 }
 .btn br {

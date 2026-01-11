@@ -40,15 +40,6 @@
   gap: 8px;
   align-items: center;
   justify-content: center;
-
-  &::after {
-    content: '';
-    background-image: url('../img/pages/front-page/news-icon.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 32px;
-    height: 32px;
-  }
 }
 
 .topNews__detailsTitle {

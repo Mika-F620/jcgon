@@ -97,7 +97,7 @@
         <ul class="accessList__itemList">
           <li class="accessList__itemLinkbox">
             <a class="accessList__itemLink" href="https://redcap.jccg-on.org/surveys/?s=EAMTC9H8RR944D9N">
-              小児腎悪性腫瘍の治療法開発に必要な新規バイオマーカー・病理所見・画像所見を同定するための国際的前向き研究
+              小児腎悪性腫瘍の治療法開発に必要な新規バイオマーカー・病理所見・画像所見を同定するための国際的前向き観察研究
             </a>
             <p class="accessList__itemText">研究略称：UMBRELLA-J</p>
           </li>
@@ -152,7 +152,7 @@
           </li>
           <li class="accessList__itemLinkbox">
             <a class="accessList__itemLink" href="https://redcap.jccg-on.org/surveys/?s=7ACXEYLJXED779KC">
-              LCH-12登録例の不可逆性病変と予後に関する前方視的縦断観察研
+              LCH-12登録例の不可逆性病変と予後に関する前方視的縦断観察研究
             </a>
             <p class="accessList__itemText">研究略称：LCH-12-LTFU</p>
           </li>
