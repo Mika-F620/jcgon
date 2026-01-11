@@ -4,10 +4,10 @@
 
 .footer {
   background-color: g.$main-color;
-  padding: 48px 83px;
+  padding: 48px 83px 150px;
 
   @include g.mq("tab") {
-    padding: 24px;
+    padding: 24px 24px 100px;
   }
 }
 
