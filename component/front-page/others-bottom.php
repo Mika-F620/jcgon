@@ -4,7 +4,7 @@
     <div class="btn-box">
       <a class="btn" href="https://secure-followup.net/sisetu_login" target="_blank" rel="noopener noreferrer">施設ログイン</a>
       <a class="btn" href="https://secure-followup.net/ken_grp_login" target="_blank" rel="noopener noreferrer">研究グループログイン</a>
-      <a class="btn" href="https://www.ncchd.go.jp/center/activity/cancer_center/cancer_central/byori/" target="_blank" rel="noopener noreferrer">研究関連書類</a>
+      <a class="btn" href="<?php echo esc_url(home_url('/')); ?>materials">研究関連書類</a>
     </div>
   </div>
   <div class="topOthersBottom__item" id="image">
