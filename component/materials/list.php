@@ -4,7 +4,7 @@
     <div class="materialsList__details">
       <div class="materialsList__item">
         <h3 class="materialsList__itemTitle">倫理申請関連書類</h3>
-        <p class="materialsList__itemNote">※小児固形腫瘍観察研究 実施計画書等の最新版（第4.2版）はこちらからダウンロードしてください。</p>
+        <p class="materialsList__itemNote">※小児固形腫瘍観察研究 実施計画書等の最新版（第4.3版）はこちらからダウンロードしてください。</p>
         <ul class="materialsList__itemList">
           <li class="materialsList__itemLinkbox">
             <p class="materialsList__itemText">
