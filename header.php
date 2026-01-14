@@ -20,7 +20,7 @@
             alt="JCCGON"
           >
         </a>
-        <a class="header__logoLink" href="https://www.project-redcap.org/" target="_blank" rel="noopener noreferrer">
+        <a class="header__logoLink" href="<?php echo esc_url(home_url('/')); ?>">
           <img
             class="header__logoImg"
             src="<?php echo get_template_directory_uri(); ?>/assets/img/common/jccgon-redcap_logo.png"
