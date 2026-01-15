@@ -1,0 +1,102 @@
+/** @format */
+
+@use "../../global/" as g;
+@use "sass:math";
+
+.materialsList__contents {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @include g.mq("sp") {
+    gap: 24px;
+  }
+}
+
+.materialsList__title {
+  font-size: 4rem;
+  color: g.$main-color;
+  font-weight: bold;
+  text-align: center;
+
+  @include g.mq("tab") {
+    font-size: 3.2rem;
+  }
+
+  br {
+    display: none;
+
+    @include g.mq("sp") {
+      display: block;
+    }
+  }
+}
+
+.materialsList__details {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @include g.mq("sp") {
+    gap: 24px;
+  }
+}
+
+.materialsList__item {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  @include g.mq("sp") {
+    gap: 20px;
+  }
+}
+
+.materialsList__itemTitle {
+  font-size: 3.2rem;
+  color: g.$text-color;
+  font-weight: bold;
+
+  @include g.mq("tab") {
+    font-size: 2.4rem;
+  }
+}
+
+.materialsList__itemNote {
+  font-size: 1.6rem;
+  color: g.$text-color;
+}
+
+.materialsList__itemList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.materialsList__itemLinkbox {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.materialsList__itemLink {
+  font-size: 1.8rem;
+  color: g.$blue-color;
+  text-decoration: underline;
+}
+
+.materialsList__itemLinkText {
+  font-size: 1.8rem;
+  color: g.$text-color;
+}
+
+.materialsList__itemText {
+  font-size: 1.8rem;
+  color: g.$text-color;
+}
+
+.materialsList__btn {
+  width: fit-content;
+  margin: 0 auto;
+  padding: 16px;
+}

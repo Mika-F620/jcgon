@@ -26,11 +26,18 @@ function enqueue_scripts()
     }
 
     // 特定の固定ページのみ読み込むファイル。固定ページのスラッグを指定
-    // 仮にworksというスラッグの固定ページのみ読み込む場合
-    if (is_page('works')) {
+    if (is_page('access')) {
       wp_enqueue_style(
-        'works', // worksという名前を設定
-        get_template_directory_uri().'/assets/styles/works.css', // パス
+        'access',
+        get_template_directory_uri().'/assets/styles/access.css', // パス
+        array('global'), // global.cssより後に読み込む
+      );
+    }
+
+    if (is_page('materials')) {
+      wp_enqueue_style(
+        'materials',
+        get_template_directory_uri().'/assets/styles/materials.css', // パス
         array('global'), // global.cssより後に読み込む
       );
     }

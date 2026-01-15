@@ -13,6 +13,14 @@ body {
   line-height: 1.2;
 }
 
+a {
+  transition: all 0.2s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
 .wrapper {
   width: 100%;
   max-width: 1160px;
@@ -104,15 +112,23 @@ body {
   width: 100%;
   background-color: g.$main-color;
   color: g.$white-color;
-  font-size: 1.8rem;
+  font-size: clamp(1.7rem, 1.40625vw, 1.8rem);
   font-weight: bold;
   text-align: center;
   padding: 8px;
   border-radius: 50px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
+  @media screen and (max-width: 1024px) {
+    font-size: 1.6rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 1.7rem;
+  }
+
   @media screen and (max-width: 480px) {
-    font-size: clamp(1.3rem, 3.75vw, 1.8rem);
+    font-size: clamp(1.2rem, 3.75vw, 1.8rem);
   }
 
   br {
@@ -124,33 +140,59 @@ body {
   }
 }
 
+.btn__link {
+  border-bottom: 1px solid g.$white-color;
+}
+
 .btn-box {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
+.btn-note {
+  font-size: 1.4rem;
+  color: #ff0000;
+  font-weight: bold;
+}
+
 // FAQ
-.faqWidget{
+.faqWrapper {
   position: fixed;
-  right: 16px;
-  bottom: 16px;
-  width: 194px;
+  bottom: 0;
+  background-color: rgba(241, 245, 248, 0.9);
+  padding: 16px;
+  width: 100%;
   z-index: 9999;
+
+  &:has(.is-open) {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 8px;
+  }
+}
+
+.faqWidget{
+  width: fit-content;
+  margin: 0 auto;
   border-radius: 100px;
   overflow: hidden;
   box-shadow: 0 4px 9px rgba(0,0,0,0.25);
-  background: #fff;
+  background: g.$white-color;
   transition: all 0.4s;
 
-  @media screen and (max-width: 768px) {
-    width: 58px;
+  @media screen and (max-width: 480px) {
+    width: 100%;
   }
 }
 
 .faqWidget.is-open {
   border-radius: 8px;
-  width: min(320px, calc(100vw - 32px));
 }
 
 .faqWidget__header {
@@ -159,8 +201,8 @@ body {
   align-items: center;
   gap: 8px;
   padding: 8px;
-  background: g.$main-color;
-  color: g.$white-color;
+  background: g.$yellow-color;
+  color: g.$main-color;
   border: 0;
   cursor: pointer;
   font-weight: 700;
@@ -179,14 +221,56 @@ body {
 }
 
 .faqWidget__title {
-  font-size: 1.6rem;
+  font-size: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 95%;
+  margin: 0 auto;
+
+  &::before {
+    content: '';
+    background-image: url('../img/common/faq-img.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 45px;
+    height: 50px;
+
+    @media screen and (max-width: 480px) {
+      width: 35px;
+      height: 40px;
+    }
+  }
+
+  &::after {
+    content: '';
+    background-image: url('../img/common/right-arrow.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+
+    @media screen and (max-width: 480px) {
+      width: 30px;
+      height: 30px;
+    }
+  }
 
   @media screen and (max-width: 768px) {
-    display: none;
+    font-size: 2rem;
   }
 }
 
 .faqWidget.is-open .faqWidget__title {
+  &::before {
+    content: none;
+  }
+
+  &::after {
+    content: none;
+  }
+
   @media screen and (max-width: 768px) {
     display: block;
   }
@@ -200,7 +284,8 @@ body {
 }
 
 .faqWidget.is-open .faqWidget__body{
-  max-height: 100vh; /* 展開時の最大高さ */
+  max-height: 100dvh; /* 展開時の最大高さ */
+  overflow: auto;
 }
 
 .faqWidget__msg{
@@ -264,7 +349,8 @@ body {
 }
 
 .faqWidget__back,
-.faqWidget__reset{
+.faqWidget__reset,
+.faqWidget__close {
   border: 0;
   cursor: pointer;
   padding: 10px 12px;

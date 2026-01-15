@@ -37,9 +37,7 @@
   }
 }
 
-.header__logoImg {
-  width: 100%;
-
+.header__logoLink {
   &:first-child {
     max-width: 351px;
 
@@ -55,6 +53,10 @@
       max-width: 28.90625vw;
     }
   }
+}
+
+.header__logoImg {
+  width: 100%;
 }
 
 .header__nav {
