@@ -24,7 +24,7 @@
           >
         </a>
       </div>
-      <a class="footer__link" href="https://jccg-on.online/privacy.html" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a>
+      <p class="footer__link">プライバシーポリシー</p>
     </div>
   </footer>
   <?php wp_footer(); ?>
