@@ -10,7 +10,7 @@
           src="<?php echo get_template_directory_uri(); ?>/assets/img/pages/front-page/down-arrow.svg"
           alt="下矢印"
         >
-        <p class="btn">REDCap利用開始の手引き(<a class="btn__link" href="<?php echo get_template_directory_uri(); ?>/assets/pdf/02_REDCap-guidance_Ver.1.3.pdf" target="_blank" rel="noopener noreferrer">PDF</a>)(<a class="btn__link" href="https://jccg-on.online/Movies/REDCap_at_first.mp4" target="_blank" rel="noopener noreferrer">動画</a>)</p>
+        <p class="btn">REDCap利用開始の手引き(<a class="btn__link" href="<?php echo get_template_directory_uri(); ?>/assets/pdf/02_REDCap-guidance_Ver.1.3.pdf" target="_blank" rel="noopener noreferrer">PDF</a>)(<a class="btn__link" href="<?php echo get_template_directory_uri(); ?>/assets/movie/redcap-start.mp4" target="_blank" rel="noopener noreferrer">動画</a>)</p>
         <img
           class="topAccount__arrow"
           src="<?php echo get_template_directory_uri(); ?>/assets/img/pages/front-page/down-arrow.svg"

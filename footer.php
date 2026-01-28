@@ -24,7 +24,7 @@
           >
         </a>
       </div>
-      <p class="footer__link">プライバシーポリシー</p>
+      <a class="footer__link" href="https://jccg.jp/utility/privacy.html" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a>
     </div>
   </footer>
   <?php wp_footer(); ?>

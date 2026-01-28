@@ -12,7 +12,7 @@
     <div class="btn-box">
       <a class="btn" href="https://secure-followup.net/sisetu_login" target="_blank" rel="noopener noreferrer">施設ログイン</a>
       <a class="btn" href="<?php echo get_template_directory_uri(); ?>/assets/pdf/14_image-terms_v1.1.pdf" target="_blank" rel="noopener noreferrer">利用規約</a>
-      <a class="btn" href="https://jccg-on.online/MembersOnly/image_diag.php" target="_blank" rel="noopener noreferrer">ID発行申請（疾患委員会対応用）</a>
+      <a class="btn" href="https://redcap.jccg-on.org/surveys/?s=7J94WAJLY8X3NMF3" target="_blank" rel="noopener noreferrer">ID発行申請（疾患委員会対応用）</a>
     </div>
   </div>
 </section>
